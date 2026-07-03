@@ -2,9 +2,9 @@
 
 Sitio web institucional para **Total Digital Studio**, estudio de desarrollo de software.
 
-**URL publicada:** [https://coriamaximiliano.github.io/Total-Digital-Studio/](https://coriamaximiliano.github.io/Total-Digital-Studio/)
+**URL publicada:** [https://coriamaximiliano.github.io/Angry-Axies/total-digital-studio/](https://coriamaximiliano.github.io/Angry-Axies/total-digital-studio/)
 
-> **Nota:** `totalstudio.github.io` no está disponible — la organización [totalstudio](https://github.com/totalstudio) ya pertenece a otra empresa. Alternativa con dominio propio: crear la org [TotalDigitalStudio](https://github.com/organizations/plan?organization=TotalDigitalStudio) → `totaldigitalstudio.github.io`
+> **Nota:** La URL `coriamaximiliano.github.io/Total-Digital-Studio/` da 404 hasta activar GitHub Pages en ese repo (Settings → Pages → branch `main`). La URL de arriba funciona ya porque usa el Pages activo de Angry-Axies.
 
 ## Contenido
 
@@ -37,17 +37,23 @@ cd "F:\AngryAxies\Juego Angry Axies navegador\totalstudio-github"
 .\publicar-totalstudio.ps1
 ```
 
-### 3. Activar GitHub Pages
+### 3. Activar GitHub Pages (obligatorio — sin esto da 404)
 
-1. En el repo → **Settings** → **Pages**
-2. **Source:** Deploy from a branch
-3. **Branch:** `main` → `/ (root)` → **Save**
+Abrí este enlace estando logueado en GitHub:
 
-En unos minutos el sitio estará en:
+**https://github.com/CoriaMaximiliano/Total-Digital-Studio/settings/pages**
+
+1. En **Build and deployment** → **Source**, elegí **Deploy from a branch**
+2. **Branch:** `main` → carpeta **`/ (root)`**
+3. Clic en **Save**
+
+En 1–2 minutos el sitio estará en:
 
 ```
 https://coriamaximiliano.github.io/Total-Digital-Studio/
 ```
+
+> Si recibiste un mail de que falló el workflow "Deploy GitHub Pages", es porque Pages no estaba activado todavía. Con los pasos de arriba alcanza; no hace falta ningún workflow.
 
 ## Archivos
 

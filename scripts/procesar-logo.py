@@ -27,6 +27,7 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     export_logo(SRC, OUT / "logo.png", 96)
     export_logo(SRC, OUT / "logo-icono.png", 64)
+    export_logo(SRC, ROOT / "logo.png", 96)
 
 
 if __name__ == "__main__":

@@ -12,8 +12,20 @@ param()
 $ErrorActionPreference = "Stop"
 
 $siteDir = $PSScriptRoot
-$repoUrl = "https://github.com/totalstudio/totalstudio.github.io.git"
-$createUrl = "https://github.com/new?name=totalstudio.github.io&description=Total+Digital+Studio+-+Sitio+corporativo"
+
+# totalstudio.github.io NO es viable: la org "totalstudio" ya existe (otra empresa).
+# Opción A (recomendada): org propia TotalDigitalStudio → totaldigitalstudio.github.io
+# Opción B (rápida): repo en tu cuenta → coriamaximiliano.github.io/Total-Digital-Studio/
+$Mode = "user"
+if ($Mode -eq "org") {
+  $repoUrl = "https://github.com/TotalDigitalStudio/TotalDigitalStudio.github.io.git"
+  $createUrl = "https://github.com/organizations/plan?organization=TotalDigitalStudio"
+  $siteUrl = "https://totaldigitalstudio.github.io"
+} else {
+  $repoUrl = "https://github.com/CoriaMaximiliano/Total-Digital-Studio.git"
+  $createUrl = "https://github.com/new?name=Total-Digital-Studio&description=Total+Digital+Studio+-+Sitio+corporativo"
+  $siteUrl = "https://coriamaximiliano.github.io/Total-Digital-Studio/"
+}
 
 function Ensure-Remote {
   param([string]$Dir, [string]$Url)
@@ -51,7 +63,7 @@ function Push-Repo {
     git push -u origin main 2>&1
     if ($LASTEXITCODE -eq 0) {
       Write-Host "OK: Sitio publicado." -ForegroundColor Green
-      Write-Host "URL: https://totalstudio.github.io" -ForegroundColor White
+      Write-Host "URL: $siteUrl" -ForegroundColor White
       Write-Host ""
       Write-Host "Si es la primera vez, activa GitHub Pages en:" -ForegroundColor Yellow
       Write-Host "Settings > Pages > Branch: main / (root)" -ForegroundColor Yellow
@@ -65,8 +77,7 @@ function Push-Repo {
 
   Write-Host ""
   Write-Host "El repositorio remoto aun no existe o no tienes acceso." -ForegroundColor Yellow
-  Write-Host "1. Crea la cuenta/organizacion 'totalstudio' en GitHub si no existe." -ForegroundColor Yellow
-  Write-Host "2. Crea el repo PUBLICO 'totalstudio.github.io' (sin README inicial):" -ForegroundColor Yellow
+  Write-Host "1. Crea el repositorio PUBLICO (sin README inicial):" -ForegroundColor Yellow
   Write-Host "   $CreateUrl" -ForegroundColor White
   Write-Host "3. Vuelve a ejecutar este script." -ForegroundColor Yellow
   Start-Process $CreateUrl
@@ -79,4 +90,4 @@ if (-not $ok) { exit 1 }
 
 Write-Host ""
 Write-Host "Listo. Tu sitio estara disponible en:" -ForegroundColor Green
-Write-Host "https://totalstudio.github.io" -ForegroundColor White
+Write-Host $siteUrl -ForegroundColor White

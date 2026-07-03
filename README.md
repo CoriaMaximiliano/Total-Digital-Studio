@@ -2,7 +2,9 @@
 
 Sitio web institucional para **Total Digital Studio**, estudio de desarrollo de software.
 
-**URL objetivo:** [https://totalstudio.github.io](https://totalstudio.github.io)
+**URL publicada:** [https://coriamaximiliano.github.io/Total-Digital-Studio/](https://coriamaximiliano.github.io/Total-Digital-Studio/)
+
+> **Nota:** `totalstudio.github.io` no está disponible — la organización [totalstudio](https://github.com/totalstudio) ya pertenece a otra empresa. Alternativa con dominio propio: crear la org [TotalDigitalStudio](https://github.com/organizations/plan?organization=TotalDigitalStudio) → `totaldigitalstudio.github.io`
 
 ## Contenido
 
@@ -17,14 +19,13 @@ Sitio web institucional para **Total Digital Studio**, estudio de desarrollo de 
 
 ### 1. Crear el repositorio
 
-1. Creá una cuenta u organización de GitHub llamada **`totalstudio`** (si aún no existe).
-2. Creá un repositorio **público** llamado exactamente **`totalstudio.github.io`**.
-3. No marques “Add a README” al crearlo (el repo debe estar vacío).
+1. Creá un repositorio **público** llamado **`Total-Digital-Studio`** en tu cuenta.
+2. No marques “Add a README” al crearlo (el repo debe estar vacío).
 
-Enlace directo para crear el repo:
+Enlace directo:
 
 ```
-https://github.com/new?name=totalstudio.github.io&description=Total+Digital+Studio+-+Sitio+corporativo
+https://github.com/new?name=Total-Digital-Studio&description=Total+Digital+Studio+-+Sitio+corporativo
 ```
 
 ### 2. Publicar desde tu PC
@@ -45,7 +46,7 @@ cd "F:\AngryAxies\Juego Angry Axies navegador\totalstudio-github"
 En unos minutos el sitio estará en:
 
 ```
-https://totalstudio.github.io
+https://coriamaximiliano.github.io/Total-Digital-Studio/
 ```
 
 ## Archivos

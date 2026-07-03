@@ -3,7 +3,7 @@
   Publica el sitio corporativo de Total Digital Studio en GitHub Pages.
 
 .EJEMPLO
-  cd "F:\AngryAxies\Juego Angry Axies navegador\totalstudio-github"
+  cd "F:\Pagina empresa Total Digital Studio"
   .\publicar-totalstudio.ps1
 #>
 [CmdletBinding()]
@@ -12,20 +12,9 @@ param()
 $ErrorActionPreference = "Stop"
 
 $siteDir = $PSScriptRoot
-
-# totalstudio.github.io NO es viable: la org "totalstudio" ya existe (otra empresa).
-# Opción A (recomendada): org propia TotalDigitalStudio → totaldigitalstudio.github.io
-# Opción B (rápida): repo en tu cuenta → coriamaximiliano.github.io/Total-Digital-Studio/
-$Mode = "user"
-if ($Mode -eq "org") {
-  $repoUrl = "https://github.com/TotalDigitalStudio/TotalDigitalStudio.github.io.git"
-  $createUrl = "https://github.com/organizations/plan?organization=TotalDigitalStudio"
-  $siteUrl = "https://totaldigitalstudio.github.io"
-} else {
-  $repoUrl = "https://github.com/CoriaMaximiliano/Total-Digital-Studio.git"
-  $createUrl = "https://github.com/new?name=Total-Digital-Studio&description=Total+Digital+Studio+-+Sitio+corporativo"
-  $siteUrl = "https://coriamaximiliano.github.io/Total-Digital-Studio/"
-}
+$repoUrl = "https://github.com/CoriaMaximiliano/Total-Digital-Studio.git"
+$createUrl = "https://github.com/new?name=Total-Digital-Studio&description=Total+Digital+Studio+-+Sitio+corporativo"
+$siteUrl = "https://coriamaximiliano.github.io/Total-Digital-Studio/"
 
 function Ensure-Remote {
   param([string]$Dir, [string]$Url)
@@ -79,7 +68,7 @@ function Push-Repo {
   Write-Host "El repositorio remoto aun no existe o no tienes acceso." -ForegroundColor Yellow
   Write-Host "1. Crea el repositorio PUBLICO (sin README inicial):" -ForegroundColor Yellow
   Write-Host "   $CreateUrl" -ForegroundColor White
-  Write-Host "3. Vuelve a ejecutar este script." -ForegroundColor Yellow
+  Write-Host "2. Vuelve a ejecutar este script." -ForegroundColor Yellow
   Start-Process $CreateUrl
   return $false
 }
